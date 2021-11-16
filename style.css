@@ -172,6 +172,7 @@ input[type="button"]:active{
     color: var(--foreground);
     text-align: justify;
     font-size: 24px;
+    padding: 1%;
 }
 
 /* Sub-Classes */
