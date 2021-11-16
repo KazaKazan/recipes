@@ -10,7 +10,6 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--background);
     overflow: hidden;
 }
 
@@ -42,6 +41,15 @@ html, body {
 
 /* Content Page */
 
+#backgroundImage {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    filter: brightness(30%);
+    object-fit: cover;
+}
+
 #content {
     height: 100%;
     width: 100%;
@@ -56,7 +64,10 @@ html, body {
     align-items: center;
     justify-content: center;
     height: 50px;
+    width: 100%;
     user-select: none;
+    background-color: var(--background);
+    color: var(--foreground);
 }
 
 #recipes {
@@ -101,7 +112,7 @@ html, body {
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--background);
 }
 
 #rightContainer {
@@ -113,8 +124,8 @@ html, body {
 
 #rightNav {
     display: grid;
-    grid-template-columns: 32% 32% 32% ;
-    gap: 2%;
+    grid-template-columns: 33% 33% 33% ;
+    gap: 0.5%;
 }
 
 #rightContent {
@@ -146,12 +157,6 @@ html, body {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s 0.5s, opacity 0.5s linear;
-}
-
-.bar {
-    width: 100%;
-    background-color: var(--foreground);
-    color: var(--background);
 }
 
 /* Animation */
