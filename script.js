@@ -58,7 +58,7 @@ function displayPage(pageNumber){
 
 function displayRecipe(){
     const recipeImage = document.getElementById("recipeImage");
-    recipeImage.setAttribute("src","assets/"+currentRecipe+".jpg");
+    recipeImage.setAttribute("src","assets/dishes/"+currentRecipe+".jpg");
     const recipeName = document.getElementById("recipeName");
     recipeName.textContent = recipeJSON[currentRecipe].name;
     

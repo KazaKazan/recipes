@@ -1,14 +1,14 @@
 {
     "0":{
         "name":"Appetizer: Mücver",
-        "info":"Mücver is a delicious Turkish dish made with zucchini. It's a great vegetarian option for an appetizer. While optional, a side of plain yogurt will make for a great start to your dinner.",
+        "info":"Mücver is a delicious Turkish dish made with zucchini. Its light and refreshing taste, combined with it soft texture makes it a great vegetarian option for an appetizer. While optional, a side of plain yogurt will make for a great start to your dinner.",
         "ingredients": ["3 Zucchinis","2 Eggs (Scrambled)","1 Carrot","45g of Flour","6 Scallions","20g Fresh Dill","Salt","Pepper"],
         "steps": ["Grate the zucchinis and squeeze their juices out.","Grate the carrot, chop the scallions and the dill.","Mix all ingredients in a bowl.","Knead the mixture until it's at a paste-like consistency.","Form patties/pancakes out of the mixture.","Fry on a pan until golden brown."],
         "restrictions": [0,1,2]
     },
 
     "1":{
-        "name":"Main: ",
+        "name":"Salad: ",
         "info": "Pending",
         "ingredients": ["pending"],
         "steps": ["pending"],
@@ -16,6 +16,14 @@
     },
 
     "2":{
+        "name":"Main: ",
+        "info": "Pending",
+        "ingredients": ["pending"],
+        "steps": ["pending"],
+        "restrictions": []
+    },
+
+    "3":{
         "name":"Desert: ",
         "info": "Pending",
         "ingredients": ["pending"],

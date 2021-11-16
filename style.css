@@ -46,7 +46,7 @@ html, body {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-rows: 50px 1fr 50px;
+    grid-template-rows: 10% 90%;
     margin: 0;
     padding: 0;
 }
@@ -63,7 +63,7 @@ html, body {
     height: 80%;
     width: 80%;
     display: grid;
-    grid-template-rows: 50px 1fr;
+    grid-template-rows: 10% 90%;
     grid-template-columns: 30% 70%;
     grid-template-areas: 
     "recipeNav recipeNav"
@@ -83,11 +83,13 @@ html, body {
 #leftContainer {
     grid-area: leftContainer;
     display: grid;
-    grid-template-rows: 90% 10%;
-    gap: 5px;
+    grid-template-rows: 89% 9%;
+    height: 100%;
+    gap: 2%;
 }
 
 #recipeImage {
+    min-height: 100%;
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -98,6 +100,8 @@ html, body {
     align-items: center;
     justify-content: center;
     width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 #rightContainer {
@@ -119,10 +123,6 @@ html, body {
     overflow: auto;
     color: var(--foreground);
     text-justify: justify;
-}
-
-#footer {
-    height: 30px;
 }
 
 /* Sub-Classes */
