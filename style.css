@@ -1,6 +1,6 @@
 :root {
-    --background: white;
-    --foreground: black;
+    --background: black;
+    --foreground: white;
     --accent-one: gray;
     --accent-two: red;
 }
@@ -40,13 +40,9 @@ html, body {
     text-align: center;
 }
 
-#contPrompt {
-    cursor: pointer;
-}
-
 /* Content Page */
 
-#recipes {
+#content {
     height: 100%;
     width: 100%;
     display: grid;
@@ -60,6 +56,34 @@ html, body {
     align-items: center;
     justify-content: center;
     height: 50px;
+    user-select: none;
+}
+
+#recipes {
+    height: 80%;
+    width: 80%;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: 30% 70%;
+    grid-template-areas: 
+    "recipeNav recipeNav"
+    "leftContainer rightContainer";
+    gap: 10px;
+}
+
+#recipeNav {
+    background-color: var(--foreground);
+    grid-area: recipeNav;
+}
+
+#leftContainer {
+    background-color: var(--foreground);
+    grid-area: leftContainer;
+}
+
+#rightContainer {
+    background-color: var(--foreground);
+    grid-area: rightContainer;
 }
 
 #footer {
@@ -71,6 +95,8 @@ html, body {
 .cleanLink {color: white;}
 .tightText {margin: 5px; padding: 0;}
 .bottomMargin {margin-bottom: 20px;}
+.flexcenter {display: flex; align-items: center; justify-content: center;}
+.clickable {cursor: pointer;}
 
 /* Main Classes */
 
