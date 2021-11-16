@@ -8,6 +8,7 @@ const backButton = document.getElementById("backButton");
 const fwdButton = document.getElementById("fwdButton");
 const resContainer = document.getElementById("resContainer");
 const imageContainer = document.getElementById("imageContainer")
+const homeButton = document.getElementById("homeText")
 
 let currentRecipe = 0;
 
@@ -19,6 +20,7 @@ backButton.onclick = () => changeRecipe(-1);
 fwdButton.onclick = () => changeRecipe(1);
 imageContainer.onmouseenter = () => displayRestrictions();
 imageContainer.onmouseleave = () => displayRestrictions();
+homeButton.onclick = () => location.reload();
 
 var request = new XMLHttpRequest();
 request.open("GET", "recipes.json", false);
