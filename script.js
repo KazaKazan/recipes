@@ -65,7 +65,17 @@ function displayRecipe(){
 };
 
 function changeRecipe(inc){
-    console.log("Changing recipe...")
+    const recipeCount = Object.keys(recipeJSON).length;
+    let newRecipe = currentRecipe + inc;
+    if(newRecipe < 0){
+        newRecipe = Object.keys(recipeJSON).length - 1;
+    }
+    else if (newRecipe > Object.keys(recipeJSON).length - 1)
+    {
+        newRecipe = 0;
+    };
+    currentRecipe = newRecipe;
+    displayRecipe()
 }
 
 displayRecipe()
