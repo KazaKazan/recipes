@@ -6,6 +6,7 @@ const pageTwo = document.getElementById("recButton");
 const rightContent = document.getElementById("rightContent");
 const backButton = document.getElementById("backButton");
 const fwdButton = document.getElementById("fwdButton");
+const resContainer = document.getElementById("resContainer");
 
 let currentRecipe = 0;
 
@@ -62,6 +63,7 @@ function displayRecipe(){
     recipeName.textContent = recipeJSON[currentRecipe].name;
     
     displayPage(0)
+    displayRestrictions()
 };
 
 function changeRecipe(inc){
@@ -76,6 +78,22 @@ function changeRecipe(inc){
     };
     currentRecipe = newRecipe;
     displayRecipe()
+}
+
+function displayRestrictions(){
+    let restrictions = recipeJSON[currentRecipe].restrictions;
+
+    while (resContainer.firstChild) {
+        resContainer.firstChild.remove()
+    };
+
+    console.log(restrictions)
+    for (let i = 0; i < restrictions.length; i++) {
+        const newRes = document.createElement("img");
+        newRes.setAttribute("src","assets/restrictions/"+restrictions[i]+".svg");
+        newRes.classList.add("restriction")
+        resContainer.appendChild(newRes)
+      };
 }
 
 displayRecipe()

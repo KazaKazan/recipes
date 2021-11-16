@@ -93,6 +93,13 @@ html, body {
     object-fit: cover;
 }
 
+#resContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 #rightContainer {
     grid-area: rightContainer;
     display: grid;
@@ -125,7 +132,7 @@ html, body {
 .bottomMargin {margin-bottom: 20px;}
 .flexcenter {display: flex; align-items: center; justify-content: center;}
 .clickable {cursor: pointer;}
-.phC {background-color: var(--foreground); color: var(--background)}
+.restriction{max-height: 100%; height: 100%; margin: 0; padding: 0;}
 
 /* Main Classes */
 
