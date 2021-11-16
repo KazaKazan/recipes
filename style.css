@@ -77,18 +77,27 @@ html, body {
     grid-template-columns: 10% 80% 10%;
     user-select: none;
     text-align: center;
+    color: var(--foreground);
 }
 
 #leftContainer {
     grid-area: leftContainer;
     display: grid;
     grid-template-rows: 90% 10%;
+    gap: 5px;
+}
+
+#recipeImage {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 #rightContainer {
     grid-area: rightContainer;
     display: grid;
     grid-template-rows: 10% 90%;
+    gap: 5px;
 }
 
 #footer {
