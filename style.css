@@ -123,7 +123,7 @@ html, body {
 .bottomMargin {margin-bottom: 20px;}
 .flexcenter {display: flex; align-items: center; justify-content: center;}
 .clickable {cursor: pointer;}
-.phC {background-color: var(--foreground);}
+.phC {background-color: var(--foreground); color: var(--background)}
 
 /* Main Classes */
 
