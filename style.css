@@ -1,5 +1,8 @@
 :root {
     --background: white;
+    --foreground: black;
+    --accent-one: gray;
+    --accent-two: red;
 }
 
 html, body {
@@ -11,7 +14,7 @@ html, body {
     overflow: hidden;
 }
 
-/* Main IDs */
+/* Landing Card */
 
 #landingCard {
     position: absolute;
@@ -39,6 +42,23 @@ html, body {
 
 #contPrompt {
     cursor: pointer;
+}
+
+/* Content Page */
+
+#recipes {
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    background-color: var(--foreground);
+    color: var(--background);
 }
 
 /* Main Classes */
