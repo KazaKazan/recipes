@@ -7,6 +7,7 @@ const rightContent = document.getElementById("rightContent");
 const backButton = document.getElementById("backButton");
 const fwdButton = document.getElementById("fwdButton");
 const resContainer = document.getElementById("resContainer");
+const imageContainer = document.getElementById("imageContainer")
 
 let currentRecipe = 0;
 
@@ -16,6 +17,8 @@ pageOne.onclick = () => displayPage(1);
 pageTwo.onclick = () => displayPage(2);
 backButton.onclick = () => changeRecipe(-1);
 fwdButton.onclick = () => changeRecipe(1);
+imageContainer.onmouseenter = () => displayRestrictions();
+imageContainer.onmouseleave = () => displayRestrictions();
 
 var request = new XMLHttpRequest();
 request.open("GET", "recipes.json", false);
@@ -63,7 +66,7 @@ function displayRecipe(){
     recipeName.textContent = recipeJSON[currentRecipe].name;
     
     displayPage(0)
-    displayRestrictions()
+    prepareRestrictions()
 };
 
 function changeRecipe(inc){
@@ -80,20 +83,28 @@ function changeRecipe(inc){
     displayRecipe()
 }
 
-function displayRestrictions(){
+function prepareRestrictions(){
     let restrictions = recipeJSON[currentRecipe].restrictions;
 
     while (resContainer.firstChild) {
         resContainer.firstChild.remove()
     };
 
-    console.log(restrictions)
     for (let i = 0; i < restrictions.length; i++) {
         const newRes = document.createElement("img");
         newRes.setAttribute("src","assets/restrictions/"+restrictions[i]+".svg");
         newRes.classList.add("restriction")
         resContainer.appendChild(newRes)
-      };
+    };
+
+}
+
+function displayRestrictions(){
+    let restrictions = recipeJSON[currentRecipe].restrictions;
+
+    if(restrictions.length > 0){
+        resContainer.classList.toggle("hidden")
+    }
 }
 
 displayRecipe()

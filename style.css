@@ -1,5 +1,6 @@
 :root {
     --background: black;
+    --background-transparent: rgba(0, 0, 0, 0.7);
     --foreground: white;
     --accent-one: gray;
     --accent-two: red;
@@ -19,7 +20,7 @@ html, body {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 2;
+    z-index: 3;
     user-select: none;
 }
 
@@ -92,14 +93,13 @@ html, body {
 }
 
 #leftContainer {
-    grid-area: leftContainer;
-    display: grid;
-    grid-template-rows: 89% 9%;
+    position: relative;
+    min-height: 100%;
     height: 100%;
-    gap: 2%;
 }
 
 #recipeImage {
+    position: absolute;
     min-height: 100%;
     height: 100%;
     width: 100%;
@@ -107,12 +107,16 @@ html, body {
 }
 
 #resContainer {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100%;
-    background-color: var(--background);
+    height: 10%;
+    background-color: var(--background-transparent);
+    pointer-events: none;
 }
 
 #rightContainer {
