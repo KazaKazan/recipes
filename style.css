@@ -47,6 +47,10 @@ html, body {
 /* Content Page */
 
 #recipes {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 50px 1fr 50px;
     margin: 0;
     padding: 0;
 }
@@ -55,7 +59,18 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 50px;
 }
+
+#footer {
+    height: 30px;
+}
+
+/* Sub-Classes */
+
+.cleanLink {color: white;}
+.tightText {margin: 5px; padding: 0;}
+.bottomMargin {margin-bottom: 20px;}
 
 /* Main Classes */
 
@@ -71,15 +86,8 @@ html, body {
     transition: visibility 0s 0.5s, opacity 0.5s linear;
 }
 
-/* Classes */
-
-.cleanLink {color: white;}
-.tightText {margin: 5px; padding: 0;}
-.bottomMargin {margin-bottom: 20px;}
-
 .bar {
     width: 100%;
-    height: 50px;
     background-color: var(--foreground);
     color: var(--background);
 }
