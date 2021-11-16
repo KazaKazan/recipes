@@ -100,6 +100,12 @@ html, body {
     gap: 5px;
 }
 
+#rightNav {
+    display: grid;
+    grid-template-columns: 32% 32% 32% ;
+    gap: 2%;
+}
+
 #footer {
     height: 30px;
 }

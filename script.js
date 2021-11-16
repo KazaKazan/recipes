@@ -18,13 +18,29 @@ class Recipe {
     }
 }
 
+var request = new XMLHttpRequest();
+request.open("GET", "recipes.json", false);
+request.send(null)
+var recipeJSON = JSON.parse(request.responseText);
+
+console.log(recipeJSON[0].name)
+
 let currentRecipe = 0;
+let currentPage = 0;
 
-function displayRecipe(recipeNumber){
-    console.log("Displaying recipe " + recipeNumber)
-
-    const recipeImage = document.getElementById("recipeImage")
-    recipeImage.setAttribute("src","assets/"+recipeNumber+".jpg")
+function displayPage(){
+    console.log("Displaying page " + currentPage)
 }
 
-displayRecipe(currentRecipe)
+function displayRecipe(){
+    console.log("Displaying recipe " + currentRecipe);
+
+    currentPage = 0;
+
+    const recipeImage = document.getElementById("recipeImage");
+    recipeImage.setAttribute("src","assets/"+currentRecipe+".jpg");
+    const recipeName = document.getElementById("recipeName");
+    recipeName.textContent = recipeJSON[currentRecipe].name;
+}
+
+displayRecipe()
