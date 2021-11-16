@@ -9,6 +9,7 @@ const fwdButton = document.getElementById("fwdButton");
 const resContainer = document.getElementById("resContainer");
 const imageContainer = document.getElementById("imageContainer")
 const homeButton = document.getElementById("homeText")
+const contentPage = document.getElementById("content")
 
 let currentRecipe = 0;
 
@@ -110,3 +111,4 @@ function displayRestrictions(){
 }
 
 displayRecipe()
+contentPage.classList.remove("hidden")
