@@ -1,5 +1,5 @@
 :root {
-    --background: black;
+    --background: white;
 }
 
 html, body {
@@ -8,4 +8,57 @@ html, body {
     width: 100%;
     height: 100%;
     background-color: var(--background);
+    overflow: hidden;
 }
+
+/* Main IDs */
+
+#landingCard {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    user-select: none;
+}
+
+#landingImage {
+    width: 100%;
+    height: 100%;
+    filter: brightness(50%);
+    object-fit: cover;
+}
+
+#landingText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+#contPrompt {
+    cursor: pointer;
+}
+
+/* Main Classes */
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s linear;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
+
+/* Sub-Classes */
+
+.cleanLink {color: white;}
+.tightText {margin: 5px; padding: 0;}
+.bottomMargin {margin-bottom: 20px;}
+
+/* Animation */
