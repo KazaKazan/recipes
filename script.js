@@ -3,6 +3,19 @@ const contPrompt = document.getElementById("contPrompt");
 
 contPrompt.onclick = () => landingCard.classList.add("hidden");
 
+class Recipe {
+    name;
+    info;
+    ingredients;
+    steps;
+    constructor(name,info,ingredients,steps){
+        this.name = name;
+        this.info = info;
+        this.ingredients = ingredients;
+        this.steps = steps;
+    }
+}
+
 let currentRecipe = 0;
 
 function displayRecipe(recipeNumber){
