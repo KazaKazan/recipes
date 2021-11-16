@@ -18,16 +18,35 @@ request.send(null);
 var recipeJSON = JSON.parse(request.responseText);
 
 function displayPage(pageNumber){
+    let recipe = recipeJSON[currentRecipe];
+
     while (rightContent.firstChild) {
         rightContent.firstChild.remove()
     };
 
     switch(pageNumber){
         case 0:
+            const infoPage = document.createElement("p");
+            infoPage.textContent = recipe.info
+            rightContent.appendChild(infoPage)
             break;
         case 1:
+            const ingPage = document.createElement("ul");
+            for (let i = 0; i < recipe.ingredients.length; i++) {
+                const newIng = document.createElement("li");
+                newIng.textContent = recipe.ingredients[i]
+                ingPage.appendChild(newIng)
+              };
+            rightContent.appendChild(ingPage)
             break;
         case 2:
+            const recPage = document.createElement("ol");
+            for (let i = 0; i < recipe.steps.length; i++) {
+                const newStep = document.createElement("li");
+                newStep.textContent = recipe.steps[i]
+                recPage.appendChild(newStep)
+              };
+            rightContent.appendChild(recPage)
             break;
     };
 };
