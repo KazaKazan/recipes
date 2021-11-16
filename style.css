@@ -21,7 +21,7 @@ h1 {
 
 input[type="button"]{
     font-family: Praise, cursive;
-    font-size: 32px;
+    font-size: 4vmin;
     color: var(--foreground);
     background: none;
     border: none;
@@ -99,15 +99,15 @@ input[type="button"]:active{
 }
 
 #recipes {
-    height: 80%;
+    height: 90%;
     width: 80%;
     display: grid;
-    grid-template-rows: 10% 90%;
-    grid-template-columns: 30% 70%;
+    grid-template-rows: 10% 85%;
+    grid-template-columns: 30% 65%;
     grid-template-areas: 
     "recipeNav recipeNav"
     "leftContainer rightContainer";
-    gap: 10px;
+    gap: 5%;
 }
 
 #recipeNav {
@@ -124,6 +124,10 @@ input[type="button"]:active{
     min-height: 100%;
     height: 100%;
     border: 5px solid var(--background);
+}
+
+#imageContainer {
+    background: var(--background);
 }
 
 #recipeImage {
