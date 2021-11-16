@@ -4,6 +4,8 @@ const pageZero = document.getElementById("infoButton");
 const pageOne = document.getElementById("ingButton");
 const pageTwo = document.getElementById("recButton");
 const rightContent = document.getElementById("rightContent");
+const backButton = document.getElementById("backButton");
+const fwdButton = document.getElementById("fwdButton");
 
 let currentRecipe = 0;
 
@@ -11,6 +13,8 @@ contPrompt.onclick = () => landingCard.classList.add("hidden");
 pageZero.onclick = () => displayPage(0);
 pageOne.onclick = () => displayPage(1);
 pageTwo.onclick = () => displayPage(2);
+backButton.onclick = () => changeRecipe(-1);
+fwdButton.onclick = () => changeRecipe(1);
 
 var request = new XMLHttpRequest();
 request.open("GET", "recipes.json", false);
@@ -59,5 +63,9 @@ function displayRecipe(){
     
     displayPage(0)
 };
+
+function changeRecipe(inc){
+    console.log("Changing recipe...")
+}
 
 displayRecipe()
