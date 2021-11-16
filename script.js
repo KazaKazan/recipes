@@ -8,11 +8,13 @@ class Recipe {
     info;
     ingredients;
     steps;
-    constructor(name,info,ingredients,steps){
+    restrictions;
+    constructor(name,info,ingredients,steps,restrictions){
         this.name = name;
         this.info = info;
         this.ingredients = ingredients;
         this.steps = steps;
+        this.restrictions = restrictions;
     }
 }
 
