@@ -55,10 +55,6 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 50px;
-    background-color: var(--foreground);
-    color: var(--background);
 }
 
 /* Main Classes */
@@ -75,10 +71,17 @@ html, body {
     transition: visibility 0s 0.5s, opacity 0.5s linear;
 }
 
-/* Sub-Classes */
+/* Classes */
 
 .cleanLink {color: white;}
 .tightText {margin: 5px; padding: 0;}
 .bottomMargin {margin-bottom: 20px;}
+
+.bar {
+    width: 100%;
+    height: 50px;
+    background-color: var(--foreground);
+    color: var(--background);
+}
 
 /* Animation */
