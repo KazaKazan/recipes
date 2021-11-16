@@ -72,18 +72,23 @@ html, body {
 }
 
 #recipeNav {
-    background-color: var(--foreground);
     grid-area: recipeNav;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    user-select: none;
+    text-align: center;
 }
 
 #leftContainer {
-    background-color: var(--foreground);
     grid-area: leftContainer;
+    display: grid;
+    grid-template-rows: 90% 10%;
 }
 
 #rightContainer {
-    background-color: var(--foreground);
     grid-area: rightContainer;
+    display: grid;
+    grid-template-rows: 10% 90%;
 }
 
 #footer {
@@ -97,6 +102,7 @@ html, body {
 .bottomMargin {margin-bottom: 20px;}
 .flexcenter {display: flex; align-items: center; justify-content: center;}
 .clickable {cursor: pointer;}
+.phC {background-color: var(--foreground);}
 
 /* Main Classes */
 
