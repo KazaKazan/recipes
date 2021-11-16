@@ -173,7 +173,8 @@ input[type="button"]:active{
     max-height: 100%;
     overflow: auto;
     color: var(--foreground);
-    text-justify: justify;
+    text-align: justify;
+    font-size: 24px;
 }
 
 /* Sub-Classes */
@@ -186,6 +187,7 @@ input[type="button"]:active{
 .clickable:hover {color: var(--accent-one)}
 .restriction{max-height: 100%; height: 100%; margin: 0; padding: 0;}
 .cursive{font-family: Praise, cursive;}
+.serif{font-family: serif;}
 
 /* Main Classes */
 

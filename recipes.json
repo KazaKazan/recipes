@@ -8,7 +8,7 @@
     },
 
     "1":{
-        "name":"Salad: ",
+        "name":"Main Course: ",
         "info": "Pending",
         "ingredients": ["pending"],
         "steps": ["pending"],
@@ -16,7 +16,7 @@
     },
 
     "2":{
-        "name":"Main: ",
+        "name":"Salad: ",
         "info": "Pending",
         "ingredients": ["pending"],
         "steps": ["pending"],
@@ -24,7 +24,7 @@
     },
 
     "3":{
-        "name":"Desert: ",
+        "name":"Dessert: ",
         "info": "Pending",
         "ingredients": ["pending"],
         "steps": ["pending"],
